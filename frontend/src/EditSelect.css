@@ -1,0 +1,121 @@
+.edit-select-page {
+  min-height: calc(100vh - 76px);
+  padding: 42px 24px 64px;
+}
+
+.edit-select-content {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+}
+
+.edit-select-content > h1 {
+  margin: 0 0 26px;
+  color: #fff;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.edit-hotel-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.edit-hotel-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(226, 238, 230, 0.9);
+  border-radius: 8px;
+  background: #fbfcf9;
+  box-shadow: 0 8px 24px rgba(5, 22, 20, 0.2);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.edit-hotel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(5, 22, 20, 0.28);
+}
+
+.edit-hotel-card > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #dfe8e1;
+}
+
+.edit-hotel-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px;
+}
+
+.edit-hotel-card h2 {
+  margin: 0 0 9px;
+  color: #173b3b;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.edit-hotel-description {
+  margin: 0 0 14px;
+  color: #5c6b66;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.edit-hotel-price {
+  margin: 0 0 18px;
+  color: #a45d3d;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.edit-hotel-card button {
+  margin-top: auto;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 5px;
+  background: #17615c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.edit-hotel-card button:hover {
+  background: #104b47;
+}
+
+@media (max-width: 900px) {
+  .edit-hotel-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .edit-select-page {
+    min-height: calc(100vh - 83px);
+    padding: 30px 16px 44px;
+  }
+
+  .edit-select-content > h1 {
+    margin-bottom: 20px;
+    font-size: 29px;
+  }
+
+  .edit-hotel-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .edit-hotel-card > img {
+    aspect-ratio: 16 / 9;
+  }
+}

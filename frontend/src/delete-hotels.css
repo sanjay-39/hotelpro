@@ -1,0 +1,125 @@
+.delete-hotels-page {
+  flex: 1;
+  min-height: calc(100vh - 80px);
+  padding: 42px 24px 56px;
+}
+
+.delete-hotels-heading,
+.delete-hotel-list {
+  width: min(100%, 1000px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.delete-hotels-heading {
+  margin-bottom: 24px;
+}
+
+.delete-hotels-heading h1 {
+  margin: 0 0 7px;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+}
+
+.delete-hotels-heading p {
+  color: #e1ebe5;
+}
+
+.delete-hotel-list {
+  display: grid;
+  gap: 14px;
+}
+
+.delete-hotel-row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 12px;
+  background: rgba(255, 253, 248, 0.96);
+  box-shadow: 0 8px 24px rgba(5, 22, 20, 0.2);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.delete-hotel-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(5, 22, 20, 0.28);
+}
+
+.delete-hotel-row img {
+  display: block;
+  width: 140px;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.delete-hotel-info {
+  min-width: 0;
+}
+
+.delete-hotel-info h2 {
+  margin: 0 0 6px;
+  color: #173b3b;
+  font-size: 20px;
+}
+
+.delete-hotel-info p {
+  margin: 4px 0;
+  color: #64716d;
+  font-size: 16px;
+}
+
+.delete-hotel-row button {
+  min-height: 40px;
+  padding: 0 17px;
+  border: 1px solid #b9583d;
+  border-radius: 8px;
+  background: #fff8f5;
+  color: #9a3f2b;
+  font-weight: 650;
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.delete-hotel-row button:hover {
+  background: #a94e35;
+  color: #fff;
+}
+
+.delete-hotels-empty {
+  padding: 30px;
+  border: 1px dashed rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  background: rgba(255, 253, 248, 0.94);
+  color: #64716d;
+  text-align: center;
+}
+
+@media (max-width: 620px) {
+  .delete-hotels-page {
+    min-height: calc(100vh - 100px);
+    padding: 30px 16px 44px;
+  }
+
+  .delete-hotels-heading h1 {
+    font-size: 31px;
+  }
+
+  .delete-hotel-row {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .delete-hotel-row img {
+    width: 88px;
+  }
+
+  .delete-hotel-row button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
